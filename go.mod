@@ -1,4 +1,4 @@
-module github.com/diamondburned/gotk4-adwaita
+module github.com/c-loftus/go-atspi
 
 go 1.22.0
 

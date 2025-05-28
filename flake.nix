@@ -32,12 +32,8 @@
           buildInputs = with pkgs-gotk4; [
             gobject-introspection
             glib
-            graphene
-            gdk-pixbuf
-            gtk4
-            gtk3
-            vulkan-headers
-            libadwaita
+            at-spi2-core         
+            at-spi2-atk 
           ];
 
           packages = with pkgs; [ self.formatter.${system} ];
