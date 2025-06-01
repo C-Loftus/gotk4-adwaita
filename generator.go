@@ -5,6 +5,7 @@ package adwaita
 import (
 	"github.com/diamondburned/gotk4/gir/cmd/gir-generate/gendata"
 	"github.com/diamondburned/gotk4/gir/cmd/gir-generate/genmain"
+	"github.com/diamondburned/gotk4/gir/girgen/types"
 )
 
 const atspiModule = "github.com/c-loftus/go-atspi/pkg"
@@ -25,6 +26,20 @@ var Data = genmain.Overlay(
 			"go.sum",
 			"LICENSE",
 			"_examples",
+		},
+		Filters: []types.FilterMatcher{
+			types.AbsoluteFilter("C.AtspiDeviceLegacy"),
+			types.AbsoluteFilter("C.AtspiDeviceLegacyClass"),
+			types.AbsoluteFilter("C.atspi_device_legacy_get_type"),
+			types.AbsoluteFilter("C.atspi_device_legacy_new"),
+			types.AbsoluteFilter("C.AtspiDeviceX11"),
+			types.AbsoluteFilter("C.AtspiDeviceX11Class"),
+			types.AbsoluteFilter("C.atspi_device_x11_get_type"),
+			types.AbsoluteFilter("C.atspi_device_x11_new"),
+			types.AbsoluteFilter("C.AtspiDeviceClass"),
+			types.AbsoluteFilter("C.AtspiDevice"),
+			types.RegexFilter(`Atk.*Matches*`),
+			types.RegexFilter(`Atk.*RelationSet*`),
 		},
 	},
 )

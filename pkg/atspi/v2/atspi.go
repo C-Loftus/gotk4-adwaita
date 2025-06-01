@@ -173,6 +173,7 @@ func (c Cache) Has(other Cache) bool {
 	return (c & other) == other
 }
 
+//
 // Action wraps an interface. This means the user can get the
 // underlying type by calling Cast().
 type Action struct {
@@ -429,6 +430,7 @@ func (obj *Action) ActionName(i int) (string, error) {
 	return _utf8, _goerr
 }
 
+//
 // Document wraps an interface. This means the user can get the
 // underlying type by calling Cast().
 type Document struct {
@@ -716,6 +718,7 @@ func (document *Document) SetTextSelections(selections []TextSelection) error {
 	return _goerr
 }
 
+//
 // EditableText wraps an interface. This means the user can get the
 // underlying type by calling Cast().
 type EditableText struct {
@@ -955,6 +958,7 @@ func (obj *EditableText) SetTextContents(newContents string) error {
 	return _goerr
 }
 
+//
 // Image wraps an interface. This means the user can get the
 // underlying type by calling Cast().
 type Image struct {
@@ -1177,6 +1181,7 @@ func (obj *Image) ImageSize() (*Point, error) {
 	return _point, _goerr
 }
 
+//
 // TableCell wraps an interface. This means the user can get the
 // underlying type by calling Cast().
 type TableCell struct {
